@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.license      = 'Restricted'
   s.requires_arc = true
   s.source       = { :git => 'https://github.com/aumentia/VSAumentiaIOS.git' }
-  s.vendored_frameworks = 'VS.framework'
+  s.vendored_frameworks = 'HelloVisualSearch/HelloVisualSearch/SDK/VS.framework'
   s.resources    = '*.{jpg}'
   s.public_header_files = '
   s.ios.frameworks = 'Accelerate',
