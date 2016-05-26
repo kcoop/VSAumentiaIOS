@@ -15,14 +15,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source       = { :git => 'https://github.com/aumentia/VSAumentiaIOS.git' }
   s.vendored_frameworks = 'HelloVisualSearch/HelloVisualSearch/SDK/VS.framework'
-  s.resources    = '*.{jpg}'
-  s.public_header_files = '
-  s.ios.frameworks = 'Accelerate',
-                    'QuartzCore',
-                    'CoreMedia',
-                    'CoreVideo',
-                    'AVFoundation
-                    'UIKit',
-                    'Foundation',
-                    'CoreGraphics'
+  s.ios.frameworks = 'Accelerate', 'QuartzCore', 'CoreMedia', 'CoreVideo', 'AVFoundation', 'UIKit', 'Foundation', 'CoreGraphics'
+  s.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '-mthumb -lstdc++ -lz -lm -mfpu=neon -mtune=cortex-a8',
+    'VALID_ARCHS' => 'arm64 armv7 armv7s'
+  }
 end
